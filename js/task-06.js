@@ -1,7 +1,8 @@
 const input = document.querySelector("#validation-input");
 
 input.addEventListener("blur", () => {
-  if (input.value.length === parseInt(input.dataset.length)) {
+  const trimmedInput = input.value.trim();
+  if (trimmedInput.length === parseInt(input.dataset.length)) {
     input.classList.remove("invalid");
     input.classList.add("valid");
   } else {

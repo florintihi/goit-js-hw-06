@@ -5,7 +5,7 @@ const updateOutput = () => {
   if (input.value === "") {
     output.textContent = "Anonymous";
   } else {
-    output.textContent = input.value;
+    output.textContent = input.value.trim();
   }
 };
 
