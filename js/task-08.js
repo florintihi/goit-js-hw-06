@@ -5,18 +5,19 @@ const loginData = {};
 
 function handleSubmit(event) {
   event.preventDefault();
-  const form = event.target;
-
   const {
-    elements: { username, password },
+    elements: { email, password },
   } = event.currentTarget;
 
-  if (username.value === "" || password.value === "") {
-    alert("Please fill in all the fields!");
+  if (email.value === "" || password.value === "") {
+    return alert("Please fill in all the fields!");
   }
 
-  loginData[element.name] = element.value;
+  const newObj = {
+    email: email.value,
+    password: password.value,
+  };
 
-  form.reset();
-  console.log(loginData);
+  event.currentTarget.reset();
+  console.log(newObj);
 }
